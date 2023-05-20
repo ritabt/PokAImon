@@ -1,25 +1,33 @@
+<img src="docs/images/image-banner.png" align="middle" width="3000"/>
+
+# PokAImon: Competitive Multi-Agent RL Training
+This is our final project for CS230 and CS231n. We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper here. More details on components of this repo can be found in the original clones README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
 
 ## To use Unity ML
 
 Step 1: Activate venv
+```sh
 envs\ml_agents\Scripts\activate
+```
 
-Step 2: Cd into directory ml_agents-release_19_branch
-
-Step 3: Train
+Step 2: Train
+```sh
 mlagents-learn config/<name of config file>.yaml --run-id=<give it a name (new name to avoid override)> 
 use --force if you want to retrain and overwrite data
-
+```
 Note: Config file specifies all the hyperparams, model architecture, optimizer, etc.
 
-Step 4: Press play in Unity
+Step 3: Press play in Unity
 
-Step 3: Launch TensorBoard to see training
+Step 4: Launch TensorBoard to see training
+```sh
 tensorboard --logdir results --port 6006
+```
 
-Step 5: To test a model, move its .onnx file (found in results/run-id dir) to the unity project Assets directory. In Unity, for both agets, drag model into model reference field. Hit play.
+Step 5: To test a model, move its `.onnx` file (found in `results/run-id/`) to the unity project Assets directory. In Unity, for both agets, drag model into model reference field. Hit play.
 
-## To add to this repo
+## Git Commands
+  
 Run this command to see what files have been modified since last commit
 ```sh
 git status
@@ -54,3 +62,6 @@ git push
 
 Trainer File:
 https://unity-technologies.github.io/ml-agents/Training-Configuration-File/
+  
+## Aknowledgments & References
+This repo is a cloned and modified version of the [Unity ML Agents repo](https://github.com/Unity-Technologies/ml-agents) and many of the strategies implemented are inspired by [this OpenAI paper](https://arxiv.org/abs/1710.03748). The Pokemon models used are from [this section](https://www.models-resource.com/3ds/pokemonxy/) of the Models Resource website.
