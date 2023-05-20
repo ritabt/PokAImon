@@ -25,6 +25,11 @@ Run this command to see what files have been modified since last commit
 git status
 ```
 
+Run the command below to grab any changes in the repo
+```sh
+git pull 
+```
+
 Run the command below to add specific files/folders
 ```sh
 git add file_name1 file_name2 folder_name
