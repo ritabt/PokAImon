@@ -1,7 +1,9 @@
 <img src="docs/images/image-banner.png" align="middle" width="3000"/>
 
 # PokAImon: Competitive Multi-Agent RL Training
-This is our final project for CS230 and CS231n. We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper here. More details on components of this repo can be found in the original clones README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
+We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper here. More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
+
+This is our final project for Stanford's CS230 and CS231n. The contributors to this repo are Cole Sohn and Rita Tlemcani.
 
 ## To use Unity ML
 
