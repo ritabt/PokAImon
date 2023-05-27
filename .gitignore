@@ -101,6 +101,7 @@ coverage.xml
 Rollerball/Library/PackageCache
 PokAImon/Library/
 PokAImon/Logs
+PokAImon/Packages
 PokAImon/Temp
 pokaimon-env/
 
