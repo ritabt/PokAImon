@@ -36,12 +36,6 @@ Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.State.ref.dll_D91762B7076BE46
 Library\Bee\artifacts\mvdfrm\Unity.VisualStudio.Editor.ref.dll_3A975DBA53ABA4AD.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.UI.ref.dll_4C98D3F7040CD4F5.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.UI.ref.dll_08FEAA520A2EFD60.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.dll_342EEB3DA377A00C.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Mdb.dll_29ACB97FB2B08649.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Pdb.dll_40FF31EF316587CC.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Rocks.dll_284DB496D3A0396C.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Burst.Unsafe.dll_D8E4AE9A0DEF4AC7.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Antlr3.Runtime.dll_01C48153AD9B9920.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.CoreModule.dll_B6F7D88163127DB5.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DeviceSimulatorModule.dll_C2705E518F3A511C.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DiagnosticsModule.dll_EAEED401B976DC6A.mvfrm
@@ -123,5 +117,9 @@ Library\Bee\artifacts\mvdfrm\UnityEngine.VirtualTexturingModule.dll_930677B13C58
 Library\Bee\artifacts\mvdfrm\UnityEngine.VRModule.dll_AC1D2E7706F9B28D.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.WindModule.dll_506786FC9C4E6749.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.XRModule.dll_DEDBF17B9033FFEB.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Android.Gradle.dll_555E8FAFF0D4A21D.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Android.Types.dll_E4A2607C6489F16F.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.dll_393376D6DE95797A.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Mdb.dll_552ACCCAD9764B37.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Pdb.dll_6C7D453A582B4CBA.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Rocks.dll_BE73060FEFF6081A.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Unsafe.dll_24890239E82BDCF9.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Antlr3.Runtime.dll_779410ED09B048D2.mvfrm
