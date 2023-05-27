@@ -99,11 +99,7 @@ coverage.xml
 
 # Library Cache
 Rollerball/Library/PackageCache
-PokAImon/Library/PackageCache
-PokAImon/Library/ShaderCache
-PokAImon/Library/BurstCache
-PokAImon/Library/Artifacts
-PokAImon/Library/Bee/artifacts
+PokAImon/Library/
 PokAImon/Logs
 PokAImon/Temp
 pokaimon-env/
