@@ -1,7 +1,7 @@
-<img src="docs/images/image-banner.png" align="middle" width="3000"/>
+<img src="images/sumoball.PNG" align="middle" width="2500"/>
 
 # PokAImon: Competitive Multi-Agent RL Training
-We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper here. More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
+We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf). More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
 
 This is our final project for Stanford's CS230 and CS231n. The contributors to this repo are Cole Sohn and Rita Tlemcani.
 
@@ -14,10 +14,10 @@ envs\ml_agents\Scripts\activate
 
 Step 2: Train
 ```sh
-mlagents-learn config/<name of config file>.yaml --run-id=<give it a name (new name to avoid override)> 
-use --force if you want to retrain and overwrite data
+mlagents-learn config\<filename>.yaml --run-id=<new_id_name> --force
 ```
 Note: Config file specifies all the hyperparams, model architecture, optimizer, etc.
+Note: Use `--force` if you want to overwrite a model of same run-id from step 0. Use `--resume` instead to resume training
 
 Step 3: Press play in Unity
 
@@ -27,6 +27,14 @@ tensorboard --logdir results --port 6006
 ```
 
 Step 5: To test a model, move its `.onnx` file (found in `results/run-id/`) to the unity project Assets directory. In Unity, for both agets, drag model into model reference field. Hit play.
+
+## How to Resume Training
+* Set the `--keep-checkpoints` option to a high enough value (before initial training)
+* Create a backup of your models folder, then edit the "checkpoint" file and set `model_checkpoint_path` to the cptk file associated with the best results
+* Use `--resume` to resume training from this point
+
+Note: You can change reward on second training but you obviously cannot modify model architecture (including number of observations or actions)
+
 
 ## Git Commands
   
