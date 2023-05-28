@@ -3,6 +3,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgentsExamples;
 using Unity.MLAgents.Sensors;
+using System.Runtime.InteropServices;
 
 [RequireComponent(typeof(JointDriveController))] // Required to set joint forces
 public class WormAgent : Agent
@@ -67,7 +68,7 @@ public class WormAgent : Agent
         }
 
         //Random start rotation to help generalize
-        bodySegment0.rotation = Quaternion.Euler(0, Random.Range(0.0f, 360.0f), 0);
+        bodySegment0.rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0.0f, 360.0f), 0);
 
         UpdateOrientationObjects();
     }
@@ -153,6 +154,7 @@ public class WormAgent : Agent
         //Reset if Worm fell through floor;
         if (bodySegment0.position.y < m_StartingPos.y - 2)
         {
+            print("Worm fell through floor. Resetting episode.");
             EndEpisode();
         }
     }

@@ -59,6 +59,8 @@ MonoBehaviour:
     StartingPos: {x: 0, y: 0, z: 0}
     StartingRot: {x: 0, y: 0, z: 0, w: 0}
     Rb: {fileID: 0}
+  platform: {fileID: 7117958736459068021}
+  ArenaRadius: 4
 --- !u!1 &1833921705462694383
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +173,7 @@ GameObject:
   - component: {fileID: 4119026884366934546}
   - component: {fileID: 1833921705594670196}
   - component: {fileID: 1833921705594670199}
+  - component: {fileID: 4748085923774437320}
   m_Layer: 0
   m_Name: BlueSumoAgent
   m_TagString: Untagged
@@ -241,6 +244,8 @@ MonoBehaviour:
   MaxStep: 0
   opponent: {fileID: 3924359521896687257}
   opponentRBody: {fileID: 0}
+  arenaRadius: 0
+  timeRemaining: 0
   forceMultiplier: 10
 --- !u!114 &1833921705594670196
 MonoBehaviour:
@@ -269,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 10
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -279,13 +284,27 @@ MonoBehaviour:
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: 87b0a8f6c2184eb4b84ed054f5650c33, type: 3}
-  m_InferenceDevice: 3
+  m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: BlueSumoBall
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
+--- !u!114 &4748085923774437320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833921705594670201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8401ac9fc3c9d8343806e073fef67c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expDefault: {fileID: 4103517058246422681}
+  expHurt: {fileID: 2911281562831681898}
 --- !u!1 &5480998511311651692
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +390,8 @@ MonoBehaviour:
   MaxStep: 0
   opponent: {fileID: 4119026884366934546}
   opponentRBody: {fileID: 0}
+  arenaRadius: 0
+  timeRemaining: 0
   forceMultiplier: 10
 --- !u!114 &298877924436216269
 MonoBehaviour:
@@ -399,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 10
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -409,7 +430,7 @@ MonoBehaviour:
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: fa1a47e60b39a66439269aa01faf57f0, type: 3}
-  m_InferenceDevice: 3
+  m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: RedSumoBall
   TeamId: 1
@@ -660,6 +681,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 806d4e2f830c0454497e408298987edf, type: 3}
   m_PrefabInstance: {fileID: 2322046259421643875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2911281562831681898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8620061291980784375, guid: 806d4e2f830c0454497e408298987edf, type: 3}
+  m_PrefabInstance: {fileID: 2322046259421643875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4103517058246422681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786538997817980154, guid: 806d4e2f830c0454497e408298987edf, type: 3}
+  m_PrefabInstance: {fileID: 2322046259421643875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7929000646132027172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -681,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10a33f3a3fcae674e86c936ee762cdfb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 400
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10a33f3a3fcae674e86c936ee762cdfb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10a33f3a3fcae674e86c936ee762cdfb, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10a33f3a3fcae674e86c936ee762cdfb, type: 3}
       propertyPath: m_Name

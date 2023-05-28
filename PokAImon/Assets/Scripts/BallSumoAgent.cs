@@ -19,6 +19,12 @@ public class BallSumoAgent : Agent
     [HideInInspector]
     public Rigidbody opponentRBody;
 
+    [HideInInspector]
+    public float arenaRadius;
+
+    [HideInInspector]
+    public float timeRemaining;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,10 +47,19 @@ public class BallSumoAgent : Agent
     //Pass observations to rl model as inputs
     public override void CollectObservations(VectorSensor sensor)
     {
+        //Time left
+        sensor.AddObservation(timeRemaining);
 
-        //Oppoenet and agent pos
-        sensor.AddObservation(this.opponent.transform.localPosition);
-        sensor.AddObservation(this.transform.localPosition);
+        //Radial Distance to Edge
+        Vector2 local_XZ  = new Vector2(this.transform.localPosition.x, this.transform.localPosition.z); //Offset from center
+        float distanceToCenter = local_XZ.magnitude;
+        float distanceFromEdge = arenaRadius - distanceToCenter;
+        sensor.AddObservation(distanceFromEdge);
+
+        //Relative oppoenent location
+        Vector2 opponent_XZ = new Vector2(opponent.transform.localPosition.x, opponent.transform.localPosition.z);
+        Vector2 rel_XZ = opponent_XZ - local_XZ;
+        sensor.AddObservation(rel_XZ);
 
         //Agent velocity
         sensor.AddObservation(this.rBody.velocity.x);
@@ -53,6 +68,13 @@ public class BallSumoAgent : Agent
         //Opponent velocity
         sensor.AddObservation(opponentRBody.velocity.x);
         sensor.AddObservation(opponentRBody.velocity.z);
+
+        //print("Time Remaining:");
+        //print(timeRemaining);
+        //print("Distance From Edge: ");
+        //print(distanceFromEdge);
+        //print("Rel Opponent Loc: ");
+        //print(rel_XZ);
     }
 
     //Actions and rewards
