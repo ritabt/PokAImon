@@ -98,10 +98,10 @@ coverage.xml
 
 
 # Library Cache
-Rollerball/Library/PackageCache
-PokAImon/Library/
-PokAImon/Logs
-PokAImon/Packages
-PokAImon/Temp
-pokaimon-env/
+/Rollerball/Library/PackageCache/
+/PokAImon/Library/
+/PokAImon/Logs/
+/PokAImon/Packages/
+/PokAImon/Temp/
+/pokaimon-env/
 

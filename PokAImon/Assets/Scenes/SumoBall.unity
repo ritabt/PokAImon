@@ -380,11 +380,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!1 &782600759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4103517058246422681, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-  m_PrefabInstance: {fileID: 1619603210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &998108669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,17 +435,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSumo (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
---- !u!1 &1185502755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2911281562831681898, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-  m_PrefabInstance: {fileID: 1619603210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1212657183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,10 +491,6 @@ PrefabInstance:
     - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
       propertyPath: m_Name
       value: BallSumo (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
@@ -567,31 +549,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSumo (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
---- !u!1 &1391893236 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1833921705594670201, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-  m_PrefabInstance: {fileID: 1619603210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1391893243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391893236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8401ac9fc3c9d8343806e073fef67c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expDefault: {fileID: 782600759}
-  expHurt: {fileID: 1185502755}
 --- !u!1001 &1415115905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -646,10 +605,6 @@ PrefabInstance:
     - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
       propertyPath: m_Name
       value: BallSumo (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
@@ -708,10 +663,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSumo (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
 --- !u!1001 &1619603210
@@ -721,6 +672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 201191884588207645, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
+      propertyPath: TeamId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1833921705193779368, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -768,10 +723,6 @@ PrefabInstance:
     - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
       propertyPath: m_Name
       value: BallSumo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441040864123163953, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_Convex
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
@@ -830,10 +781,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSumo (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
 --- !u!1001 &1979922750
@@ -891,10 +838,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSumo (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
 --- !u!1001 &2141293824
@@ -951,10 +894,6 @@ PrefabInstance:
     - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
       propertyPath: m_Name
       value: BallSumo (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833921705193779371, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6b3b43811a0bc44bde0aa84406debb, type: 3}
