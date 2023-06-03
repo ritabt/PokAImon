@@ -9,7 +9,7 @@ public class ArenaEnvController : MonoBehaviour
     [System.Serializable]
     public class PlayerInfo
     {
-        public BallSumoAgent Agent;
+        public SumoAgent Agent;
         [HideInInspector]
         public Vector3 StartingPos;
         [HideInInspector]
@@ -56,8 +56,14 @@ public class ArenaEnvController : MonoBehaviour
         BluePlayer.Agent.timeRemaining = (float)MaxSecs - (m_ResetTimer / 50f);
         RedPlayer.Agent.timeRemaining = (float)MaxSecs - (m_ResetTimer / 50f);
 
+        Vector2 blue_local_XZ  = new Vector2(BluePlayer.Agent.transform.localPosition.x, BluePlayer.Agent.transform.transform.localPosition.z); //Offset from center
+        Vector2 red_local_XZ  = new Vector2(RedPlayer.Agent.transform.localPosition.x, RedPlayer.Agent.transform.transform.localPosition.z); //Offset from center
+
+        float blueDistanceFromEdge = ArenaRadius - blue_local_XZ.magnitude;
+        float redDistanceFromEdge = ArenaRadius - red_local_XZ.magnitude;
+
         //Check for sparse rewards. ie - have agents lost
-        if (BluePlayer.Agent.transform.localPosition.y < 0)
+        if (blueDistanceFromEdge<0)
         {
             RedPlayer.Agent.SetReward(1.0f);
             BluePlayer.Agent.SetReward(-1.0f);
@@ -67,7 +73,7 @@ public class ArenaEnvController : MonoBehaviour
 
             ResetScene();
         }
-        else if (RedPlayer.Agent.transform.localPosition.y < 0) {
+        else if (redDistanceFromEdge<0) {
             RedPlayer.Agent.SetReward(-1.0f);
             BluePlayer.Agent.SetReward(1.0f);
 
@@ -94,6 +100,6 @@ public class ArenaEnvController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

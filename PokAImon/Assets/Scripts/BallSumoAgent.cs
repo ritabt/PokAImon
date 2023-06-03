@@ -7,25 +7,8 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using Unity.VisualScripting;
 
-public class BallSumoAgent : Agent
+public class BallSumoAgent : SumoAgent
 {
-    [HideInInspector]
-    public Agent opponent;
-
-    private Vector3 m_StartingPos;
-    private Quaternion m_StartingRot;
-    private Rigidbody rBody;
-
-    [HideInInspector]
-    public Rigidbody opponentRBody;
-
-    [HideInInspector]
-    public float arenaRadius;
-
-    [HideInInspector]
-    public float timeRemaining;
-
-
     // Start is called before the first frame update
     void Start()
     {
