@@ -11,6 +11,7 @@ public class MagnemiteSumoAgent : SumoAgent
 {
     public float MoveForce = 1f;
     public float Torque = 1f;
+    public bool EnemyPositionFeature = true;
 
     // Start is called before the first frame update
     void Start()
@@ -67,27 +68,32 @@ public class MagnemiteSumoAgent : SumoAgent
 
         //Radial Distance to Edge
         Vector2 local_XZ  = new Vector2(this.transform.localPosition.x, this.transform.localPosition.z); //Offset from center
-        float distanceToCenter = local_XZ.magnitude;
-        float distanceFromEdge = arenaRadius - distanceToCenter;
-        sensor.AddObservation(distanceFromEdge);
+
+        Vector2 toEdge = local_XZ.normalized * (arenaRadius - local_XZ.magnitude);
+
+        sensor.AddObservation(toEdge);
 
         //Relative oppoenent location
-        Vector2 opponent_XZ = new Vector2(opponent.transform.localPosition.x, opponent.transform.localPosition.z);
-        Vector2 rel_XZ = opponent_XZ - local_XZ;
-        sensor.AddObservation(rel_XZ);
+
+        if (EnemyPositionFeature)
+        {
+            Vector2 opponent_XZ = new Vector2(opponent.transform.localPosition.x, opponent.transform.localPosition.z);
+            Vector2 rel_XZ = opponent_XZ - local_XZ;
+            sensor.AddObservation(rel_XZ);
+        }
 
         //Agent velocity
-        sensor.AddObservation(rBody.velocity.x);
-        sensor.AddObservation(rBody.velocity.z);
+        //sensor.AddObservation(rBody.velocity.x);
+        //sensor.AddObservation(rBody.velocity.z);
 
         //Agent angularVelocity
-        sensor.AddObservation(rBody.angularVelocity.magnitude);
+        //sensor.AddObservation(rBody.angularVelocity.magnitude);
 
         //Rotation
-        sensor.AddObservation(this.transform.eulerAngles.y);
+        //sensor.AddObservation(this.transform.eulerAngles.y);
 
         //Opponent velocity
-        sensor.AddObservation(opponentRBody.velocity.x);
-        sensor.AddObservation(opponentRBody.velocity.z);
+        //sensor.AddObservation(opponentRBody.velocity.x);
+        //sensor.AddObservation(opponentRBody.velocity.z);
     }
 }
