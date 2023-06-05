@@ -52,9 +52,10 @@ public class BallSumoAgent : Agent
 
         //Radial Distance to Edge
         Vector2 local_XZ  = new Vector2(this.transform.localPosition.x, this.transform.localPosition.z); //Offset from center
-        float distanceToCenter = local_XZ.magnitude;
-        float distanceFromEdge = arenaRadius - distanceToCenter;
-        sensor.AddObservation(distanceFromEdge);
+
+        Vector2 toEdge = local_XZ.normalized * (arenaRadius - local_XZ.magnitude);
+
+        sensor.AddObservation(toEdge);
 
         //Relative oppoenent location
         Vector2 opponent_XZ = new Vector2(opponent.transform.localPosition.x, opponent.transform.localPosition.z);
