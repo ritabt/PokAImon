@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 298877924436216269}
   - component: {fileID: 201191884588207645}
   - component: {fileID: 3546928939211928423}
+  - component: {fileID: 8023680427226897120}
   m_Layer: 0
   m_Name: RedSumoAgent
   m_TagString: Untagged
@@ -432,7 +433,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: fa1a47e60b39a66439269aa01faf57f0, type: 3}
   m_InferenceDevice: 1
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: RedSumoBall
   TeamId: 1
   m_UseChildSensors: 1
@@ -453,6 +454,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expDefault: {fileID: 552714112236781851}
   expHurt: {fileID: 1675284787105450216}
+--- !u!114 &8023680427226897120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480998511311651692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2902496c0120472b90269f94a0aec7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Record: 1
+  NumStepsToRecord: 0
+  DemonstrationName: Test1
+  DemonstrationDirectory: Assets/Demonstrations
 --- !u!1001 &2260997564606887393
 PrefabInstance:
   m_ObjectHideFlags: 0
