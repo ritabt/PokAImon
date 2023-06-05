@@ -1666,7 +1666,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &145988602483164421
 MonoBehaviour:
@@ -1690,6 +1690,7 @@ MonoBehaviour:
   timeRemaining: 0
   MoveForce: 5
   Torque: 5
+  EnemyPositionFeature: 1
 --- !u!114 &145988602483164422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 10
+    VectorObservationSize: 5
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 3
@@ -2377,7 +2378,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &145988603268604283
 MonoBehaviour:
@@ -2401,6 +2402,7 @@ MonoBehaviour:
   timeRemaining: 0
   MoveForce: 5
   Torque: 5
+  EnemyPositionFeature: 1
 --- !u!114 &145988603268604294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,7 +2416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 10
+    VectorObservationSize: 5
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 3
