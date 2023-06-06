@@ -41,6 +41,14 @@ namespace Unity.MLAgents.Demonstrations
         public int NumStepsToRecord;
 
         /// <summary>
+        /// Number of experiences to record. The editor will stop playing when it reaches this threshold.
+        /// Set to zero to record indefinitely.
+        /// </summary>
+        [Tooltip("Number of experiences to record. The editor will stop playing when it reaches this threshold. " +
+                 "Set to zero to record indefinitely.")]
+        public bool OneExperience;
+
+        /// <summary>
         /// Base demonstration file name. If multiple files are saved, the additional filenames
         /// will have a sequence of unique numbers appended.
         /// </summary>
@@ -67,9 +75,13 @@ namespace Unity.MLAgents.Demonstrations
 
         Agent m_Agent;
 
+        private Rigidbody rbody;
+        public Rigidbody opponentRbody;
+
         void OnEnable()
         {
             m_Agent = GetComponent<Agent>();
+            rbody = GetComponent<Rigidbody>();
         }
 
         void Update()
@@ -82,7 +94,7 @@ namespace Unity.MLAgents.Demonstrations
             LazyInitialize();
 
             // Quit when num steps to record is reached
-            if (NumStepsToRecord > 0 && m_DemoWriter.NumSteps >= NumStepsToRecord)
+            if ((NumStepsToRecord > 0 && m_DemoWriter.NumSteps >= NumStepsToRecord) || (OneExperience && (rbody.position.y<0 || opponentRbody.position.y<0)))
             {
                 Application.Quit(0);
 #if UNITY_EDITOR
