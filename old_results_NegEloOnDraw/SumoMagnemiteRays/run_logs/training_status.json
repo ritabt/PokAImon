@@ -1,0 +1,39 @@
+{
+    "SumoMagnemite": {
+        "checkpoints": [
+            {
+                "steps": 499987,
+                "file_path": "results\\SumoMagnemiteRays\\SumoMagnemite\\SumoMagnemite-499987.onnx",
+                "reward": -1.0,
+                "creation_time": 1685896628.7314017,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteRays\\SumoMagnemite\\SumoMagnemite-499987.pt"
+                ]
+            },
+            {
+                "steps": 500023,
+                "file_path": "results\\SumoMagnemiteRays\\SumoMagnemite\\SumoMagnemite-500023.onnx",
+                "reward": -1.0,
+                "creation_time": 1685896628.782511,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteRays\\SumoMagnemite\\SumoMagnemite-500023.pt"
+                ]
+            }
+        ],
+        "elo": 1896.3138276055824,
+        "final_checkpoint": {
+            "steps": 500023,
+            "file_path": "results\\SumoMagnemiteRays\\SumoMagnemite.onnx",
+            "reward": -1.0,
+            "creation_time": 1685896628.782511,
+            "auxillary_file_paths": [
+                "results\\SumoMagnemiteRays\\SumoMagnemite\\SumoMagnemite-500023.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

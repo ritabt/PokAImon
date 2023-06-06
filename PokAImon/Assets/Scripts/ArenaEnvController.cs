@@ -66,7 +66,7 @@ public class ArenaEnvController : MonoBehaviour
         if (blueDistanceFromEdge<0)
         {
             RedPlayer.Agent.SetReward(1.0f);
-            BluePlayer.Agent.SetReward(-1.0f);
+            BluePlayer.Agent.SetReward(-0.9999f);
 
             RedPlayer.Agent.EndEpisode();
             BluePlayer.Agent.EndEpisode();
@@ -74,7 +74,7 @@ public class ArenaEnvController : MonoBehaviour
             ResetScene();
         }
         else if (redDistanceFromEdge<0) {
-            RedPlayer.Agent.SetReward(-1.0f);
+            RedPlayer.Agent.SetReward(-0.9999f);
             BluePlayer.Agent.SetReward(1.0f);
 
             RedPlayer.Agent.EndEpisode();
@@ -82,7 +82,7 @@ public class ArenaEnvController : MonoBehaviour
 
             ResetScene();
         }
-        else if (MaxSecs > 0 && m_ResetTimer / 50f >= MaxSecs) {
+        else if (MaxSecs > 0 && (m_ResetTimer / 50f) >= MaxSecs) {
             RedPlayer.Agent.SetReward(-1.0f);
             BluePlayer.Agent.SetReward(-1.0f);
 

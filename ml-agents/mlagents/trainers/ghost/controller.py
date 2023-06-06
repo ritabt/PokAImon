@@ -96,6 +96,7 @@ class GhostController:
         e1 = r1 / summed
 
         change = result - e1
+        
         for team_id, trainer in self._ghost_trainers.items():
             if team_id != self._learning_team:
                 trainer.change_opponent_elo(change)

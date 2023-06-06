@@ -1,0 +1,39 @@
+{
+    "SumoMagnemite": {
+        "checkpoints": [
+            {
+                "steps": 499972,
+                "file_path": "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite\\SumoMagnemite-499972.onnx",
+                "reward": 0.3333333333333333,
+                "creation_time": 1685902246.4654016,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite\\SumoMagnemite-499972.pt"
+                ]
+            },
+            {
+                "steps": 500004,
+                "file_path": "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite\\SumoMagnemite-500004.onnx",
+                "reward": 0.0,
+                "creation_time": 1685902246.516513,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite\\SumoMagnemite-500004.pt"
+                ]
+            }
+        ],
+        "elo": 2000.3937819854812,
+        "final_checkpoint": {
+            "steps": 500004,
+            "file_path": "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite.onnx",
+            "reward": 0.0,
+            "creation_time": 1685902246.516513,
+            "auxillary_file_paths": [
+                "results\\SumoMagnemiteRelEnemyPos\\SumoMagnemite\\SumoMagnemite-500004.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

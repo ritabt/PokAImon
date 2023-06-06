@@ -5,6 +5,7 @@ from collections import defaultdict
 from typing import Deque, Dict, DefaultDict, List
 
 import numpy as np
+import pdb
 
 from mlagents_envs.logging_util import get_logger
 from mlagents_envs.base_env import BehaviorSpec
@@ -59,10 +60,13 @@ class GhostTrainer(Trainer):
         :param artifact_path: Path to store artifacts from this trainer.
         """
 
+        assert(False)
+
         super().__init__(
             brain_name, trainer_settings, training, artifact_path, reward_buff_cap
         )
-
+        logger.info("YO INIT")
+        
         self.trainer = trainer
         self.controller = controller
 
@@ -194,6 +198,13 @@ class GhostTrainer(Trainer):
         i.e. in asymmetric games. We assume the last reward determines the winner.
         :param trajectory: Trajectory.
         """
+        print("YO")
+        logger.warning("YOWarning")
+        logger.info("YOLOG")
+        logger.debug("YODEBUG")
+
+        assert(False)
+
         if (
             trajectory.done_reached
             and trajectory.all_group_dones_reached
@@ -203,6 +214,14 @@ class GhostTrainer(Trainer):
             final_reward = (
                 trajectory.steps[-1].reward + trajectory.steps[-1].group_reward
             )
+            
+            pdb.set_trace()
+
+            print("My Reward: ", trajectory.steps[-1].reward)
+
+            print("Opponent Reward: ", self.controller._ghost_trainers[self.current_opponent].trajectory.steps[-1].reward)
+
+            
             result = 0.5
             if final_reward > 0:
                 result = 1.0

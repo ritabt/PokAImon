@@ -1,0 +1,48 @@
+{
+    "SumoMagnemite": {
+        "checkpoints": [
+            {
+                "steps": 499998,
+                "file_path": "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-499998.onnx",
+                "reward": 1.0,
+                "creation_time": 1685945903.4489164,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-499998.pt"
+                ]
+            },
+            {
+                "steps": 648148,
+                "file_path": "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-648148.onnx",
+                "reward": null,
+                "creation_time": 1685947703.6050627,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-648148.pt"
+                ]
+            },
+            {
+                "steps": 964598,
+                "file_path": "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-964598.onnx",
+                "reward": 1.0,
+                "creation_time": 1685980376.049432,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-964598.pt"
+                ]
+            }
+        ],
+        "elo": 1375.4144459072663,
+        "final_checkpoint": {
+            "steps": 964598,
+            "file_path": "results\\SumoMagnemiteVisFC\\SumoMagnemite.onnx",
+            "reward": 1.0,
+            "creation_time": 1685980376.049432,
+            "auxillary_file_paths": [
+                "results\\SumoMagnemiteVisFC\\SumoMagnemite\\SumoMagnemite-964598.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

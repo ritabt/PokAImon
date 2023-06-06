@@ -44,6 +44,7 @@ class PPOTrainer(RLTrainer):
         :param seed: The seed the model will be initialized with
         :param artifact_path: The directory within which to store artifacts from this trainer.
         """
+        assert(False)
         super().__init__(
             behavior_name,
             trainer_settings,

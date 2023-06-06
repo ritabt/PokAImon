@@ -1,0 +1,39 @@
+{
+    "SumoMagnemite": {
+        "checkpoints": [
+            {
+                "steps": 499976,
+                "file_path": "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite\\SumoMagnemite-499976.onnx",
+                "reward": null,
+                "creation_time": 1685922224.6907156,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite\\SumoMagnemite-499976.pt"
+                ]
+            },
+            {
+                "steps": 830618,
+                "file_path": "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite\\SumoMagnemite-830618.onnx",
+                "reward": null,
+                "creation_time": 1685926367.8347125,
+                "auxillary_file_paths": [
+                    "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite\\SumoMagnemite-830618.pt"
+                ]
+            }
+        ],
+        "elo": 1026.513768672585,
+        "final_checkpoint": {
+            "steps": 830618,
+            "file_path": "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite.onnx",
+            "reward": null,
+            "creation_time": 1685926367.8347125,
+            "auxillary_file_paths": [
+                "results\\SumoMagnemiteVisSimpleNewELO\\SumoMagnemite\\SumoMagnemite-830618.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
