@@ -1,11 +1,25 @@
 <img src="images/sumoball.PNG" align="middle" width="2500"/>
 
-# PokAImon: Competitive Multi-Agent RL Training
-We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning. More implementation details can be found in our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf). More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
+# PokAImon Training: Competitive Multi-Agent RL with GAIL
+We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning and Generative Adversarial Imitation Learning. More implementation details can be found in our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf). More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
 
 This is our final project for Stanford's CS230 and CS231n. The contributors to this repo are Cole Sohn and Rita Tlemcani.
 
-## To use Unity ML
+## Background
+
+We cloned and modified the "Unity ML Agents Toolkit" from [here](https://github.com/Unity-Technologies/ml-agents). They provide some examples for getting started and very detailed instructions in [here](https://unity.com/products/machine-learning-agents). We recommend you check out their starter examples if this is your first time using Unity!
+
+Many of the strategies we used to train our Pokemon agents are from [this paper](https://arxiv.org/pdf/1710.03748.pdf) by OpenAI and the GAIL paper available [here](https://arxiv.org/pdf/1606.03476.pdf). If you're interested in the theory implemented, please check out our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf) or our presentation slides [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf).
+
+## Dependencies
+
+To run this repo you need a virtual environment for all your packages. Create a virtual environment with Python 3.8 (the Python version is important for this) then install the packages following the instructions in [here](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md). You don't need to follow the advanced part.
+
+## To use this repo
+
+In `config\` you'll find a few `.yaml` files. These files specify the training configurations. The documentation for how to write these files is [here](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/) but we found that the official documentation is not complete and learning from provided examples has been helpful.
+
+Make a config file with your desired training configuration and follow the instructions below:
 
 Step 1: Activate venv
 ```sh
@@ -26,7 +40,7 @@ Step 4: Launch TensorBoard to see training
 tensorboard --logdir results --port 6006
 ```
 
-Step 5: To test a model, move its `.onnx` file (found in `results/run-id/`) to the unity project Assets directory. In Unity, for both agets, drag model into model reference field. Hit play.
+Step 5: To test a model, move its `.onnx` file (found in `results/run-id/`) to the unity project Assets directory. In Unity, for both agents, drag model into model reference field. Hit play.
 
 ## How to Resume Training
 * Set the `--keep-checkpoints` option to a high enough value (before initial training)
