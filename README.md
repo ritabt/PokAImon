@@ -1,4 +1,4 @@
-<img src="images/sumoball.PNG" align="middle" width="2500"/>
+<img src="images/main menu.PNG" align="middle" width="2500"/>
 
 # PokAImon Training: Competitive Multi-Agent RL with GAIL
 We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning and Generative Adversarial Imitation Learning. More implementation details can be found in our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf). More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
@@ -10,6 +10,9 @@ This is our final project for Stanford's CS230 and CS231n. The contributors to t
 We cloned and modified the "Unity ML Agents Toolkit" from [here](https://github.com/Unity-Technologies/ml-agents). They provide some examples for getting started and very detailed instructions in [here](https://unity.com/products/machine-learning-agents). We recommend you check out their starter examples if this is your first time using Unity!
 
 Many of the strategies we used to train our Pokemon agents are from [this paper](https://arxiv.org/pdf/1710.03748.pdf) by OpenAI and the GAIL paper available [here](https://arxiv.org/pdf/1606.03476.pdf). If you're interested in the theory implemented, please check out our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf) or our presentation slides [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf).
+
+<img src="images/voltorb.PNG" align="middle" width="1000"/>
+<img src="images/caterpie.PNG" align="middle" width="1000"/>
 
 ## Dependencies
 
