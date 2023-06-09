@@ -2,6 +2,7 @@
 
 # PokAImon Training: Competitive Multi-Agent RL with GAIL
 Play Our Demo: https://colesohn.itch.io/pokaimon
+
 We train Pokemon agents to sumo fight in a Unity environment with Reinforcement Learning and Generative Adversarial Imitation Learning. More implementation details can be found in our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf). More details on components of this repo can be found in the original cloned README [here](https://github.com/ritabt/PokAImon/blob/main/UNITY_README.md).
 
 This is our final project for Stanford's CS230 and CS231n. The contributors to this repo are Cole Sohn and Rita Tlemcani.
