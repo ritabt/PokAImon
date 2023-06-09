@@ -11,10 +11,10 @@ We cloned and modified the "Unity ML Agents Toolkit" from [here](https://github.
 
 Many of the strategies we used to train our Pokemon agents are from [this paper](https://arxiv.org/pdf/1710.03748.pdf) by OpenAI and the GAIL paper available [here](https://arxiv.org/pdf/1606.03476.pdf). If you're interested in the theory implemented, please check out our report paper [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf) or our presentation slides [here](https://github.com/ritabt/PokAImon/blob/main/Report%20Paper.pdf).
 
-<p akign="middle">
-  <img src="images/voltorb.png" width="100" />
-  <img src="images/caterpie.png" width="100" /> 
-  <img src="images/magnemite.png" width="100" />
+<p align="middle">
+  <img src="images/voltorb.png" width="200" />
+  <img src="images/caterpie.png" width="200" /> 
+  <img src="images/magnemite.png" width="200" />
 </p>
 <!-- <img src="images/voltorb.png" align="middle" width="1000"/>
 <img src="images/caterpie.png" align="middle" width="1000"/>
